@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../global.css" />
+    <title>글쓰기</title>
+  </head>
+  <body>
+    <header id="isLogged">
+      <a href="/week7/index.jsp">어쩔티비</a>
+      <a href="../Action/mypageAction.jsp" id="mypageBtn">마이페이지</a>
+      <a href="./writePost.html" id="writePostBtn">글쓰기</a>
+      <form action="../Action/logoutAction.jsp" id="logoutForm">
+        <input type="submit" value="로그아웃" />
+      </form>
+    </header>
+
+    <h1>글쓰기</h1>
+    <form method="post" action="../Action/writePostAction.jsp">
+      <label name="titleValue">제목</label>
+      <input type="text" name="titleValue" required />
+      <br />
+
+      <label name="contentValue">내용</label>
+      <textarea name="contentValue" required></textarea>
+
+      <input type="submit" value="게시하기" />
+    </form>
+  </body>
+</html>

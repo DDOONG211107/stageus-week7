@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제목</title>
+  </head>
+  <body>
+    <header id="isNotLogged">
+      <a href="/week7/index.jsp">어쩔티비</a>
+      <a href="./Page/login.html" id="loginBtn">로그인</a>
+      <a href="./Page/signup.html" id="signupBtn">회원가입</a>
+    </header>
+  
+    <header id="isLogged">
+      <a href="/week7/index.jsp">어쩔티비</a>
+        <form action="./Action/logoutAction.jsp" id="logoutForm">
+          <input type="submit" value="로그아웃" />
+        </form>
+      <a href="./Action/mypageAction.jsp" id="mypageBtn">마이페이지</a>
+      <a href="./Page/writePost.html" id="writePostBtn">글쓰기</a>
+    </header>
+  
+      <h1>게시글 목록</h1>
+      <h3 id="userId"></h3>
+      <section id="postList"></section>
+
+
+    <aside>
+      <ul>
+        <a href>마이페이지</a>
+        <a href>회원탈퇴</a>
+      </ul>
+    </aside>
+    <section id="commentSection">
+      <h2 id="notExistComment">아직 작성된 댓글이 없습니다.</h2>
+      <div>
+        <h4 class="commentNickname">댓글 작성자 이름</h3>
+        <h5 class="commentTime">댓글 작성된 시간</h5>
+        <p class="commentContent">댓글 내용</p>
+        <div onclick="updateComment()" class="btn">수정</div>
+        <div onclick="deleteComment()" class="btn">삭제</div>
+      </div>
+    </section>
+    <form>
+        <label name="title">제목</label><input type="text" name="title">
+        <label name="content">내용</label><textarea name="content"></textarea>
+    </form>
+    <form id="postUpdateAndDelete">
+      <div class="btn" onclick="updatePost()">글 수정하기</div>
+      <div class="btn" onclick="deletePost()">글 삭제하기</div>
+    </form>
+    <form method="post" action="">
+      댓글쓰기
+      <br/>
+      <label name="commentContent">내용</label><textarea name="commentContent"></textarea>
+      <input type="submit" value="댓글 달기">
+    </form>
+  </body>
+</html>

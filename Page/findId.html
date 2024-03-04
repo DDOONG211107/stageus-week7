@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../global.css" />
+    <title>id 찾기</title>
+  </head>
+  <body>
+    <header id="isNotLogged">
+      <a href="/week7/index.jsp">어쩔티비</a>
+      <a href="login.html" id="loginBtn">로그인</a>
+      <a href="signup.html" id="signupBtn">회원가입</a>
+    </header>
+
+    <h1>id찾기</h1>
+    <h2>이메일주소를 인증해주세요</h2>
+    <form method="post" id="findIdForm" action="../Action/findIdAction.jsp">
+      <label name="userEmailValue">이메일</label>
+      <input type="email" id="userEmailInput" name="userEmailValue" required />
+      <br />
+      <input type="submit" value="인증" />
+    </form>
+  </body>
+</html>

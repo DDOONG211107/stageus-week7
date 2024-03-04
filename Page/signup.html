@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../global.css" />
+    <title>어쩔티비 회원가입</title>
+  </head>
+
+  <body>
+    <header id="isNotLogged">
+      <a href="/week7/index.jsp">어쩔티비</a>
+      <a href="login.html" id="loginBtn">로그인</a>
+      <a href="signup.html" id="signupBtn">회원가입</a>
+    </header>
+
+    <h1>회원가입 페이지</h1>
+
+    <form id="signupForm" method="post" action="">
+      <div>
+        <label name="userIdValue">id</label>
+        <input type="text" id="userIdInput" name="userIdValue" required />
+        <div class="btn" id="checkSameIdBtn" onclick="checkSameId()">
+          id 중복체크
+        </div>
+      </div>
+      <div>
+        <label name="userEmailValue">이메일</label>
+        <input
+          type="email"
+          id="userEmailInput"
+          name="userEmailValue"
+          required
+        />
+        <div class="btn" id="checkSameEmailBtn" onclick="checkSameEmail()">
+          이메일 중복체크
+        </div>
+      </div>
+      <div>
+        <label name="userNicknameValue">닉네임</label>
+        <input
+          type="text"
+          id="userNicknameInput"
+          name="userNicknameValue"
+          required
+        />
+      </div>
+      <div>
+        <label name="userPwValue">비밀번호</label>
+        <input
+          type="password"
+          id="userPasswordInput"
+          name="userPasswordValue"
+          required
+        />
+      </div>
+      <div>
+        <label name="userPwCheckValue">비밀번호 확인</label>
+        <input
+          type="password"
+          id="userPasswordCheckInput"
+          name="userPasswordCheckValue"
+          required
+        />
+      </div>
+      <div type="submit" class="btn" id="signupBtn" onclick="signup()">
+        회원가입
+      </div>
+      <!-- <input type="submit" value="fakeSubmitBtn" class="fakeBtn" /> -->
+    </form>
+
+    <script>
+      function signup() {
+        if (
+          document.getElementById("userIdInput").value.trim() == "" ||
+          document.getElementById("userEmailInput").value.trim() == "" ||
+          !document.getElementById("userEmailInput").value.includes("@") ||
+          document.getElementById("userNicknameInput").value.trim() == "" ||
+          document.getElementById("userPasswordInput").value.trim() == "" ||
+          document.getElementById("userPasswordCheckInput").value.trim() == ""
+        ) {
+          alert("값을 올바르게 입력해주세요.");
+        } else {
+          document.getElementById("signupForm").action =
+            "../Action/signupAction.jsp";
+          document.getElementById("signupForm").submit();
+        }
+      }
+
+      function checkSameId() {
+        document.getElementById("signupForm").action =
+          "../Action/checkSameIdAction.jsp";
+        document.getElementById("signupForm").submit();
+      }
+
+      function checkSameEmail() {
+        document.getElementById("signupForm").action =
+          "../Action/checkSameEmailAction.jsp";
+        document.getElementById("signupForm").submit();
+      }
+    </script>
+  </body>
+</html>

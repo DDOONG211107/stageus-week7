@@ -1,0 +1,74 @@
+header {
+  background-color: skyblue;
+  padding: 16px;
+}
+
+/* form {
+  background-color: slateblue;
+} */
+
+.btn {
+  background-color: plum;
+  cursor: pointer;
+  display: inline-block;
+  margin: 20px;
+  padding: 12px;
+}
+
+h1 {
+  background-color: orange;
+  padding: 20px;
+}
+
+.comment {
+  background-color: #d5ebef;
+  padding: 32px;
+}
+
+textarea {
+  resize: none;
+  width: 800px;
+  height: 400px;
+}
+
+.commentTextarea {
+  resize: none;
+  width: 600px;
+  height: 100px;
+}
+
+#postList {
+  padding: 40px 180px;
+  background-color: #fee1ed;
+}
+
+.postLink {
+  padding: 8px 0;
+}
+
+.postNum {
+  width: 10%;
+  display: inline-block;
+  text-align: left;
+}
+
+.postTitle {
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+}
+
+.postWriter {
+  width: 10%;
+  display: inline-block;
+  text-align: right;
+}
+
+.post {
+  background-color: #dbeec2;
+  padding: 32px;
+}
+
+.fakeBtn {
+  display: none;
+}

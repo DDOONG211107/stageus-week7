@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../global.css" />
+    <title>로그인</title>
+  </head>
+  <body>
+    <header id="isNotLogged">
+      <a href="/week7/index.jsp">어쩔티비</a>
+      <a href="login.html" id="loginBtn">로그인</a>
+      <a href="signup.html" id="signupBtn">회원가입</a>
+    </header>
+
+    <h1>로그인페이지</h1>
+    <form method="post" id="loginForm">
+      <label name="userIdValue">id</label>
+      <input type="text" id="userIdInput" name="userIdValue" required />
+      <label name="userPasswordValue">비밀번호</label>
+      <input
+        type="password"
+        id="userPasswordInput"
+        name="userPasswordValue"
+        required
+      />
+      <br />
+      <div class="btn" id="loginBtn" onclick="login()">로그인</div>
+      <br />
+      <a id="findIdBtn" class="btn" href="./findId.html">id 찾기</a>
+      <a id="findPwBtn" class="btn" href="./findPassword.html">비밀번호 찾기</a>
+    </form>
+
+    <script>
+      function login() {
+        document.getElementById("loginForm").action =
+          "../Action/loginAction.jsp";
+        document.getElementById("loginForm").submit();
+      }
+    </script>
+  </body>
+</html>
